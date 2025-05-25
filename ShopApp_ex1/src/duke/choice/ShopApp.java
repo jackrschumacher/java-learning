@@ -22,6 +22,7 @@ public class ShopApp {
 
         Customer c1 = new Customer();
         c1.name = "Pinky";
+        c1.size = "S";
 
         System.out.println("Customer is: " + c1.name);
 
@@ -47,6 +48,24 @@ public class ShopApp {
         total = (item1.price + item2.price + item3.price) * 1 + tax;
 
         System.out.println("Total cost: " + total);
+
+        int measurement = 3;
+
+        switch (measurement) {
+            case 1, 2, 3:
+                c1.size = "S";
+                break;
+            case 4, 5, 6:
+                c1.size = "M";
+                break;
+            case 7, 8, 9:
+                c1.size = "L";
+                break;
+            default:
+                c1.size = "X";
+        }
+        System.out.println("Customer size "+c1.size);
+
     }
 
 }
