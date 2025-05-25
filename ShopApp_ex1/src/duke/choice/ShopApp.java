@@ -31,7 +31,7 @@ public class ShopApp {
         Clothing item3 = new Clothing();
 
 //        Initialize a clothing array
-        Clothing[] items = {item1, item2};
+        Clothing[] items = {item1, item2, new Clothing(), new Clothing()};
 
         item1.description = "Blue Jacket";
         item1.price = 20.9;
@@ -41,9 +41,13 @@ public class ShopApp {
         item2.price = 10.5;
         item2.size = "S";
 
-        item3.description = "Orange T-Shirt";
-        item3.price = 10.5;
-        item3.size = "S";
+        items[2].description = "Green Scarf";
+        items[2].price = 5.0;
+        items[2].size = "S";
+        
+        items[3].description = "Blue T-Shirt";
+        items[3].price = 10.5;
+        items[3].size = "S";
 
 //        System.out.println("Item 1" + "," + item1.description + "," + item1.price + "," + item1.size);
 //        System.out.println("Item 2" + "," + item2.description + "," + item2.price + "," + item2.size);
@@ -65,9 +69,13 @@ public class ShopApp {
         }
         System.out.println("Customer size " + c1.size);
         for (Clothing item : items) {
-            total += item.price;
-            System.out.println("Current total"+total);
-            System.out.println("Item " + "," + item.description + "," + item.price + "," + item.size);
+//            Is the customer size equal to the clothing size that is being requested
+            if (c1.size.equals(item.size)) {
+                total += item.price;
+                System.out.println("Item " + "," + item.description + "," + item.price + "," + item.size);
+                if(total > 15){break;}
+            }
+
         }
         System.out.println("Total cost: " + total);
 
