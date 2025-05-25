@@ -9,7 +9,24 @@ package duke.choice;
  * @author jackr
  */
 public class Customer {
-    String name;
-    String size;
+    private String name;
+    private String size;
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public String getSize() {
+        return size;
+    }
+
+    public void setSize(String size) {
+        this.size = size;
+    }
+
     
 }
