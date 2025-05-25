@@ -52,20 +52,9 @@ public class ShopApp {
 //        System.out.println("Item 2" + "," + item2.description + "," + item2.price + "," + item2.size);
 //        total = (item1.price + item2.price + item3.price) * 1 + tax;
         int measurement = 3;
-
-        switch (measurement) {
-            case 1, 2, 3:
-                c1.setSize("S");
-                break;
-            case 4, 5, 6:
-                c1.setSize("M");
-                break;
-            case 7, 8, 9:
-                c1.setSize("L");
-                break;
-            default:
-                c1.setSize("X");
-        }
+        c1.setSize(measurement);
+        
+        
         System.out.println("Customer size " + c1.getSize());
         for (Clothing item : items) {
 //            Is the customer size equal to the clothing size that is being requested
