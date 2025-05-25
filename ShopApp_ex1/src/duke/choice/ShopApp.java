@@ -29,10 +29,10 @@ public class ShopApp {
         Clothing item1 = new Clothing();
         Clothing item2 = new Clothing();
         Clothing item3 = new Clothing();
-        
+
 //        Initialize a clothing array
         Clothing[] items = {item1, item2};
-        
+
         item1.description = "Blue Jacket";
         item1.price = 20.9;
         item1.size = "M";  //Default value is medium, but also defined here as well
@@ -45,13 +45,9 @@ public class ShopApp {
         item3.price = 10.5;
         item3.size = "S";
 
-        System.out.println("Item 1" + "," + item1.description + "," + item1.price + "," + item1.size);
-        System.out.println("Item 2" + "," + item2.description + "," + item2.price + "," + item2.size);
-
-        total = (item1.price + item2.price + item3.price) * 1 + tax;
-
-        System.out.println("Total cost: " + total);
-
+//        System.out.println("Item 1" + "," + item1.description + "," + item1.price + "," + item1.size);
+//        System.out.println("Item 2" + "," + item2.description + "," + item2.price + "," + item2.size);
+//        total = (item1.price + item2.price + item3.price) * 1 + tax;
         int measurement = 3;
 
         switch (measurement) {
@@ -67,7 +63,13 @@ public class ShopApp {
             default:
                 c1.size = "X";
         }
-        System.out.println("Customer size "+c1.size);
+        System.out.println("Customer size " + c1.size);
+        for (Clothing item : items) {
+            total += item.price;
+            System.out.println("Current total"+total);
+            System.out.println("Item " + "," + item.description + "," + item.price + "," + item.size);
+        }
+        System.out.println("Total cost: " + total);
 
     }
 
