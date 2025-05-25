@@ -4,6 +4,9 @@
  */
 package duke.choice;
 
+import java.util.HashSet;
+import java.util.Set;
+
 /**
  *
  * @author jackr
@@ -15,6 +18,15 @@ public class Customer {
 
     private Clothing[] items;
 
+    public Customer(String name, int measurement) {
+        this.name = name;
+        setSize(measurement);
+        
+    }
+
+    
+    
+    
     public void addItems(Clothing[] someItems) {
         items = someItems;
 
