@@ -8,7 +8,7 @@ package duke.choice;
  *
  * @author jackr
  */
-public class Clothing {
+public class Clothing implements Comparable<Clothing> {
 
     private String description;
     private double price;
@@ -46,6 +46,14 @@ public class Clothing {
 
     public void setSize(String size) {
         this.size = size;
+    }
+    @Override
+    public String toString(){
+        return getDescription() +","+ getSize()+","+getPrice();
+    }
+    @Override
+    public int compareTo(Clothing c){
+        return this.description.compareTo(c.description);
     }
 
 }
